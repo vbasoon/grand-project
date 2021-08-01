@@ -71,7 +71,7 @@ function build() {
 
 function watching() {
   watch(["src/scss/**/*.scss"], styles);
-  watch(["src/js/**/*.js", "!app/js/main.min.js"], scripts);
+  watch(["src/js/**/*.js", "!src/js/main.min.js"], scripts);
   watch(["src/*.html"]).on("change", browserSync.reload);
 }
 
