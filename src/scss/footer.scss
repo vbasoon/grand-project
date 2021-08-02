@@ -35,14 +35,15 @@
   }
 
   &__form {
+    display: flex;
   }
 
   &__form-input {
     padding: 6px 10px 6px 18px;
     border-radius: 21px;
     background-color: transparent;
+    width: 100%;
     border: 1px solid rgba($color-title, 0.7);
-    width: 368px;
     &::placeholder {
       font-family: inherit;
       font-weight: 400;
@@ -60,6 +61,8 @@
     font-weight: 600;
     padding: 6px 12px;
     min-width: 160px;
+    margin-left: 9px;
+    cursor: pointer;
   }
 
   &__copyright {
