@@ -1,10 +1,32 @@
-.header__inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.header {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8rem;
+  }
+  &__btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
 }
 
-.header__inner .menu__list {
-  display: flex;
-  gap: 20px;
+.logo {
+  margin: 0 auto;
+}
+
+.menu {
+  padding-left: 2.19rem;
+  padding-right: 3.75rem;
+  &__list {
+    display: flex;
+    gap: 5rem;
+  }
+  &__list-link {
+    @extend %title-font;
+    color: rgba(54, 56, 56, 0.9);
+    line-height: 1.375rem;
+  }
 }

@@ -1,0 +1,28 @@
+.footer {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content {
+    background-color: $color-footer;
+    padding: 60px 0 80px;
+  }
+
+  &__info-title {
+    color: $color-title;
+    @extend %title-font;
+    margin-bottom: 14px;
+    line-height: 23px;
+  }
+
+  &__info-text {
+  }
+
+  &__copyright {
+    background-color: $color-title;
+    color: #a1a1a1;
+    text-align: center;
+    padding: 42px 0px 41px;
+    font-size: 0.75rem;
+  }
+}
