@@ -147,3 +147,20 @@
     font-size: 0.75rem;
   }
 }
+
+@media only screen and (max-width: 1000px) {
+  .footer {
+    &__social {
+      margin-left: 50px;
+    }
+    &__menu {
+      margin-right: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .footer__social {
+    margin-left: 0px;
+  }
+}

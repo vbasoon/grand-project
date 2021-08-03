@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <div class="wrapper">
+  <div class="wrapper" id="app">
   <header class="header">
     <div class="container">
       <div class="header__inner">
@@ -28,20 +28,19 @@
             <li class="menu__list-item"><a class="menu__list-link href=""#">Contacts</a></li>
           </ul>
         </nav>
+        <button class="header__sidebar-btn" id="btn-menu" href="#"><img src="images/icon_menu.svg" alt="menu-button"> </button>
         <div class="header__sidebar sidebar">
-          <button class="header__sidebar-btn" href="#"><img src="images/icon_menu.svg" alt="menu-button"> </button>
+          
 <div class="sidebar__modal">
-  <button class="sidebar__close">
-    <img src="images/close.svg" alt="close">
-  </button>
+  <button class="sidebar__close" id="btn-close"><img src="images/close.svg" alt="close"></button>
   <div class="sidebar__content">
-    <a class="logo-link" href="/" ><img src="./images/big-logo.png" class="big-logo" alt="logo"></a>  
+    <a class="sidebar__logo logo-link" href="/" ><img src="./images/big-logo.png" class="big-logo" alt="logo"></a>  
     <h4 class="sidebar__title">Side</h4>
     <p class="sidebar__text">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae id laudantium molestias amet enim alias. Laboriosam omnis vero, assumenda, soluta incidunt repellat delectus facere illo consequatur minus, laborum nihil? Ea!
     </p>
     
-      <img src="./images/sidebar-img.jpg" alt="sidebar-image">
+      <img class="sidebar__image" src="./images/sidebar-img.jpg" alt="sidebar-image">
     
   </div>
   
