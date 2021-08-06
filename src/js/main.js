@@ -18,7 +18,13 @@ closeBtn.addEventListener("click", () => {
 
 const swiper = new Swiper(".swiper-container", {
   // Optional parameters
-
+  // effect: "fade",
+  // fadeEffect: {
+  //   crossFade: true,
+  // },
+  autoplay: {
+    delay: 5000,
+  },
   loop: true,
 
   // If we need pagination
