@@ -151,6 +151,8 @@
   }
 }
 
+/*---------- Decor ---------------*/
+
 .cta {
   padding: 170px 0 155px;
   background-image: url("../images/Group_2.jpg");
@@ -180,6 +182,8 @@
   }
 }
 
+/*---------------- Work-Stage -----------------*/
+
 .work-stages {
   padding: 80px 0 30px;
   &__title {
@@ -193,15 +197,42 @@
   &__box {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     align-items: flex-start;
     .work-stage {
       width: 250px;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      &--bottom {
+      &__one {
+      }
+      &__two {
+        margin-left: 317px;
+        position: relative;
+
+        padding-bottom: 60px;
+        &::before {
+          position: absolute;
+          content: "";
+          bottom: -1px;
+          left: 0px;
+          width: 2px;
+          height: 20px;
+          background-color: rgba($color-title, 0.7);
+        }
+      }
+      &__three {
         padding-top: 20px;
+        margin-left: 305px;
+        position: relative;
+        &::before {
+          position: absolute;
+          content: "";
+          top: -22px;
+          left: 0px;
+          width: 2px;
+          height: 20px;
+          background-color: rgba($color-title, 0.7);
+        }
       }
       &__title {
         margin-left: 13px;
@@ -211,23 +242,28 @@
       &__text {
         padding-top: 20px;
       }
+
       &__line {
+        display: block;
         width: 100%;
-        height: 2px;
+        height: 3px;
         background-color: rgba($color-title, 0.7);
         margin-top: -25px;
         position: relative;
-        &::before {
-          position: absolute;
+        &::after {
           content: "";
-          bottom: -4px;
-          left: 0;
+          position: absolute;
           width: 10px;
           height: 10px;
+          top: -3px;
+          left: -2px;
           border-radius: 50%;
-          background-color: rgba($color-title, 1);
+          background-color: rgba($color-title, 0.9);
+          z-index: 10;
         }
       }
+    }
+    &__point {
     }
   }
 }
