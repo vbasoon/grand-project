@@ -1,18 +1,23 @@
 const app = document.getElementById("app");
-console.log(app);
 const menuBtn = document.getElementById("btn-menu");
-console.log(menuBtn);
 const sidebar = document.getElementById("sidebar");
-console.log(sidebar);
 const closeBtn = document.getElementById("btn-close");
-console.log(closeBtn);
+
+const gallery_tab = document.querySelectorAll(".gallery__items");
+
+const gallery_btn = document.querySelectorAll(".gallery__btn");
+
+gallery_btn.forEach(function (item) {
+  item.addEventListener("click", () => {
+    console.log("clicked");
+  });
+});
 
 menuBtn.addEventListener("click", () => {
   sidebar.classList.toggle("sidebar__open");
 });
 
 closeBtn.addEventListener("click", () => {
-  console.log("click");
   sidebar.classList.remove("sidebar__open");
 });
 
