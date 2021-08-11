@@ -18,12 +18,14 @@
     font-weight: 600;
     cursor: pointer;
     opacity: none;
+    transition: background-color 0.5s ease;
   }
 
   &__btn.active {
     background-color: #ffef35;
     border-color: #ffef35;
     color: $color-title;
+    transition: background-color 0.5s ease;
   }
 
   &__items {
@@ -39,6 +41,7 @@
 
   .gallery__items {
     display: none;
+    animation: fadeEffect 1s;
   }
 
   .gallery__items.active {
@@ -46,5 +49,14 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 20px;
+  }
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
