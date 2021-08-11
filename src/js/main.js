@@ -9,7 +9,22 @@ const gallery_btn = document.querySelectorAll(".gallery__btn");
 
 gallery_btn.forEach(function (item) {
   item.addEventListener("click", () => {
-    console.log("clicked");
+    let currentBtn = item;
+    let galleryId = currentBtn.getAttribute("data-tab");
+    let currentGallery = document.querySelector(galleryId);
+
+    if (!currentBtn.classList.contains("active")) {
+      gallery_btn.forEach(function (item) {
+        item.classList.remove("active");
+      });
+
+      gallery_tab.forEach(function (item) {
+        item.classList.remove("active");
+      });
+
+      currentBtn.classList.add("active");
+      currentGallery.classList.add("active");
+    }
   });
 });
 
