@@ -7,7 +7,8 @@ const gallery_tab = document.querySelectorAll(".gallery__items");
 
 const gallery_btn = document.querySelectorAll(".gallery__btn");
 
-gallery_btn.forEach(function (item) {
+gallery_btn.forEach(onTabClick);
+function onTabClick(item) {
   item.addEventListener("click", () => {
     let currentBtn = item;
     let galleryId = currentBtn.getAttribute("data-tab");
@@ -26,7 +27,9 @@ gallery_btn.forEach(function (item) {
       currentGallery.classList.add("active");
     }
   });
-});
+}
+
+document.querySelector(".gallery__btn:nth-child(2)").click();
 
 menuBtn.addEventListener("click", () => {
   sidebar.classList.toggle("sidebar__open");
