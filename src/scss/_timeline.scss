@@ -1,0 +1,83 @@
+.work-stages {
+  padding: 80px 0 30px;
+  &__title {
+    @extend %title-font;
+    text-align: center;
+    color: $color-title;
+    margin-bottom: 40px;
+    font-size: 36px;
+    line-height: 51px;
+  }
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    .work-stage {
+      width: 250px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      &__one {
+      }
+      &__two {
+        margin-left: 317px;
+        position: relative;
+
+        padding-bottom: 60px;
+        &::before {
+          position: absolute;
+          content: "";
+          bottom: -1px;
+          left: 0px;
+          width: 2px;
+          height: 20px;
+          background-color: rgba($color-title, 0.7);
+        }
+      }
+      &__three {
+        padding-top: 20px;
+        margin-left: 305px;
+        position: relative;
+        &::before {
+          position: absolute;
+          content: "";
+          top: -22px;
+          left: 0px;
+          width: 2px;
+          height: 20px;
+          background-color: rgba($color-title, 0.7);
+        }
+      }
+      &__title {
+        margin-left: 13px;
+        color: $color-title;
+        @extend %title-font;
+      }
+      &__text {
+        padding-top: 20px;
+      }
+
+      &__line {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: rgba($color-title, 0.7);
+        margin-top: -25px;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          top: -3px;
+          left: -2px;
+          border-radius: 50%;
+          background-color: rgba($color-title, 0.9);
+          z-index: 10;
+        }
+      }
+    }
+    &__point {
+    }
+  }
+}
