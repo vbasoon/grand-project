@@ -175,3 +175,70 @@
     }
   }
 }
+
+/*-------------- ABout Page ---------------*/
+
+// .about {
+//   &__hero {
+//     .container {
+//       .about__hero__title {
+//       }
+//     }
+//   }
+//   &__content {
+//     .container {
+//       .about__title {
+//       }
+//       .about__text {
+//       }
+//       p {
+//       }
+//     }
+//   }
+//   &__video {
+//     &__play {
+//       .about__video__play-btn {
+//       }
+//       &:hover {
+//       }
+//       &:active {
+//       }
+//       &:focus {
+//       }
+//     }
+//   }
+// }
+
+/* -----------About Page BEM----------------*/
+
+.about {
+  &__hero {
+    background-image: url(../images/about/placeholder.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    text-align: center;
+    padding: 160px 0;
+  }
+
+  &__hero__title {
+    color: $color-title;
+    @extend %title-font;
+    font-size: 60px;
+    line-height: 80px;
+  }
+
+  &__content {
+  }
+
+  &__text {
+  }
+
+  &__title {
+  }
+
+  &__video {
+  }
+}
+.container {
+}

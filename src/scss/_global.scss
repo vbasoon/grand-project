@@ -39,3 +39,23 @@ body {
   text-align: center;
   margin-bottom: 50px;
 }
+
+.breadscrumbs {
+  background-color: rgba(#dfdfdf, 0.5);
+  padding: 13px 14px;
+  &__list {
+    display: flex;
+    gap: 5px;
+  }
+  &__item::after {
+    content: "/";
+  }
+  &__item:last-child::after {
+    display: none;
+  }
+
+  &__link {
+    color: $color-text;
+    font-size: 14px;
+  }
+}
