@@ -219,6 +219,7 @@
     background-position: top center;
     text-align: center;
     padding: 160px 0;
+    margin-top: -53px;
   }
 
   &__hero__title {
@@ -229,16 +230,52 @@
   }
 
   &__content {
-  }
-
-  &__text {
+    padding: 130px 0 40px;
   }
 
   &__title {
+    color: $color-title;
+    @extend %title-font;
+    font-size: 36px;
+    line-height: 60px;
+    padding-bottom: 22px;
+    margin-bottom: 22px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 200px;
+      height: 1px;
+      background-color: #6d7278;
+    }
+  }
+
+  &__text {
+    padding-left: 284px;
+    p {
+      margin-bottom: 30px;
+    }
   }
 
   &__video {
+    background-image: url("../images/about/video-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    min-height: 414px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &__video__play-btn {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+    }
   }
-}
-.container {
 }
