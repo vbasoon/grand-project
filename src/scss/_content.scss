@@ -282,6 +282,19 @@
 
 .inspiration {
   padding-top: 100px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("../images/about/inpiration-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 362px;
+    z-index: -5;
+  }
   &__inner {
     display: flex;
     justify-content: center;
@@ -323,8 +336,29 @@
     &-content {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      width: 100%;
+      padding-bottom: 14px;
+      border-bottom: 2px solid #fff;
+      border-radius: 4px;
     }
+  }
+  &__line {
+    height: 2px;
+    border-radius: 4px;
+    background-color: $color-title;
+    margin-top: -2px;
+  }
+}
+
+.partners {
+  padding: 16px 50px 60px;
+  &__items {
+    display: flex;
+    justify-content: center;
+    gap: 4.25rem;
+  }
+  &__item {
+    width: 289px;
+    height: 289px;
+    //border: 2px solid green;
   }
 }
