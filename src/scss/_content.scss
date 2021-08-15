@@ -213,7 +213,7 @@
 
 .about {
   &__hero {
-    background-image: url(../images/about/placeholder.jpg);
+    background-image: url(../images/about/about-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
@@ -276,6 +276,55 @@
       right: 0;
       bottom: 0;
       z-index: 10;
+    }
+  }
+}
+
+.inspiration {
+  padding-top: 100px;
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__images {
+    margin-right: 78px;
+    margin-left: -230px;
+  }
+  &__title {
+    font-size: 36px;
+    line-height: 60px;
+    color: $color-title;
+    @extend %title-font;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: #6d7278;
+      width: 200px;
+      height: 1px;
+    }
+  }
+  &__text {
+    margin-bottom: 30px;
+  }
+  &__content {
+    max-width: 825px;
+  }
+  &__item {
+    color: $color-title;
+    @extend %title-font;
+    line-height: 23px;
+    margin-bottom: 33px;
+    &-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
     }
   }
 }

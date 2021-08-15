@@ -1,5 +1,5 @@
 .collection {
-  margin: 0 auto;
+  margin: 0 auto 105px;
 
   &__title {
     color: $color-title;
@@ -8,6 +8,7 @@
     padding-bottom: 25px;
     margin-bottom: 25px;
     position: relative;
+    text-align: center;
     @extend %title-font;
     &::after {
       position: absolute;
