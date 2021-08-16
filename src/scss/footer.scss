@@ -25,26 +25,6 @@
     max-width: 475px;
   }
 
-  &__info-email {
-    font-weight: 600;
-    font-size: 14px;
-    color: $color-title;
-    margin-bottom: 22px;
-    padding-left: 30px;
-    display: inline-block;
-    position: relative;
-    &::before {
-      content: "";
-      background-image: url(../images/envelope.svg);
-      background-repeat: no-repeat;
-      position: absolute;
-      top: 0.45rem;
-      left: 0;
-      width: 1rem;
-      height: 1rem;
-    }
-  }
-
   &__form {
     display: flex;
   }
