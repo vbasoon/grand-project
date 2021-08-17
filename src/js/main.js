@@ -6,6 +6,8 @@ const closeBtn = document.getElementById("btn-close");
 const gallery_tab = document.querySelectorAll(".gallery__items");
 
 const gallery_btn = document.querySelectorAll(".gallery__btn");
+const heroSlider = document.querySelector(".slider-one");
+const contactSlider = document.querySelector(".slider-two");
 
 gallery_btn.forEach(onTabClick);
 function onTabClick(item) {
@@ -29,7 +31,9 @@ function onTabClick(item) {
   });
 }
 
-document.querySelector(".gallery__btn:nth-child(2)").click();
+if (gallery_tab.length !== 0) {
+  document.querySelector(".gallery__btn:nth-child(2)").click();
+}
 
 menuBtn.addEventListener("click", () => {
   sidebar.classList.toggle("sidebar__open");
@@ -39,7 +43,7 @@ closeBtn.addEventListener("click", () => {
   sidebar.classList.remove("sidebar__open");
 });
 
-const swiper = new Swiper(".swiper-container", {
+const slider1 = new Swiper(".slider-one", {
   // Optional parameters
   // effect: "fade",
   // fadeEffect: {
@@ -53,6 +57,34 @@ const swiper = new Swiper(".swiper-container", {
   // If we need pagination
   pagination: {
     el: ".swiper-pagination",
+    type: "bullets",
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+const slider2 = new Swiper(".slider-two", {
+  slidesPerView: 10,
+  slidesPerGroup: 10,
+
+  // Optional parameters
+  // effect: "fade",
+  // fadeEffect: {
+  //   crossFade: true,
+  // },
+  autoplay: {
+    delay: 5000,
+  },
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination2",
     type: "bullets",
     clickable: true,
   },
