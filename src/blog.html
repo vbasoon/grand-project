@@ -130,14 +130,23 @@
               </div>
               <div class="blog__item article-slider ">
                 <div class="swiper-container slider-three">
-                  <div class="swiper-wrapper blog__slider">
-                    <div class="swiper-slide"><img src="./images/blog/blog-img1.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/blog/blog-img1.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/blog/blog-img1.jpg" alt=""></div>
+                  <div class="swiper-wrapper article-slider__wrapper">
+                    <div class="swiper-slide article-slider__item">
+                      <img class="article-slider__img" src="./images/blog/blog-img1.jpg" alt="slider-img">
+                    </div>
+                    <div class="swiper-slide article-slider__item">
+                      <img class="article-slider__img" src="./images/blog/blog-img1.jpg" alt="slider-img">
+                    </div>
+                    <div class="swiper-slide article-slider__item">
+                      <img class="article-slider__img" src="./images/blog/blog-img1.jpg" alt="slider-img">
+                    </div>
 
                   </div>
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-button-next"></div>
+                  <div class="swiper-navigation article-slider__navigation">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                  </div>
+                  
 
                 </div>
                 <div class="blog__item-info blogpost__info">
@@ -160,8 +169,8 @@
               </div>
               <div class="blog__pagination pagination">
 
-                <a class="pagination-arrow" href="#">
-                  <img class="pagination__arrow-icon" src="" alt="arrow">
+                <a class="pagination__arrow pagination__arrow--disabled" href="#">
+                  <img class="pagination__arrow-icon" src="./images/icons/prev.svg" alt="arrow icon">
                 </a>
 
 
@@ -174,8 +183,8 @@
                   </li>
                 </ul>
 
-                <a class="pagination-arrow" href="#">
-                  <img class="pagination__arrow-icon" src="" alt="arrow">
+                <a class="pagination__arrow" href="#">
+                  <img class="pagination__arrow-icon" src="./images/icons/next.svg" alt="arrow icon">
                 </a>
 
 

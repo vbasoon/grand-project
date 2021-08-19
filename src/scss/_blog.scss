@@ -67,15 +67,65 @@
 
   &__items {
     max-width: 750px;
-    &__item {
-    }
+  }
+
+  &__item {
+    margin-bottom: 80px;
   }
   &__item-img {
-    max-width: 100%;
+    max-width: 730px;
   }
+  &__item-info {
+    padding: 25px 0 10px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #707070;
+    a {
+      color: inherit;
+    }
+  }
+
+  &__item-title {
+    font-size: 24px;
+    line-height: 38px;
+    margin-bottom: 6px;
+    color: $color-title;
+    @extend %title-font;
+  }
+
   &__blockquote {
-    display: block;
     width: 100%;
+    background-color: rgba(233, 233, 233, 0.5);
+    margin-bottom: 50px;
+    padding: 54px 64px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 38px;
+    text-align: center;
+    &-author {
+      font-size: 24px;
+      font-style: normal;
+      line-height: 22px;
+      color: $color-title;
+      @extend %title-font;
+      margin-top: 23px;
+      padding-top: 23px;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 200px;
+        height: 1px;
+        background-color: #6d7278;
+        border-radius: 1px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: 0;
+      }
+    }
   }
 
   .article-video {
@@ -97,6 +147,31 @@
         bottom: 0;
         z-index: 10;
       }
+    }
+  }
+}
+
+.article-slider {
+  &__wrapper {
+  }
+  &__item {
+  }
+  &__img {
+    width: 100%;
+  }
+  &__navigation {
+    .swiper-button-prev,
+    .swiper-button-next {
+      padding: 0;
+      border: none;
+      background: transparent;
+      position: absolute;
+      top: 50%;
+      transition: translateY(-50%);
+      z-index: 10;
+      cursor: pointer;
+      color: white;
+      opacity: 0.7;
     }
   }
 }
@@ -151,10 +226,28 @@
 }
 .pagination {
   display: flex;
-  width: 100%;
-  &__item {
-    width: 50px;
-    height: 50px;
+  justify-content: center;
+  align-items: center;
+  &__list {
+    display: flex;
+    gap: 12px;
+  }
+  &__list-item {
+  }
+
+  &__arrow {
+    margin: 0 6px;
+  }
+  &__arrow--disabled {
+    opacity: 0;
+  }
+  &__list-num {
+    font-weight: 600;
+    font-size: 14px;
+    color: #707070;
+  }
+  &__list-num--active {
+    color: $color-title;
   }
 }
 
