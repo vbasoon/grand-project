@@ -8,6 +8,7 @@ const gallery_tab = document.querySelectorAll(".gallery__items");
 const gallery_btn = document.querySelectorAll(".gallery__btn");
 const heroSlider = document.querySelector(".slider-one");
 const contactSlider = document.querySelector(".slider-two");
+const blogSlider = document.querySelector(".slider-three");
 
 gallery_btn.forEach(onTabClick);
 function onTabClick(item) {
@@ -71,6 +72,33 @@ const slider1 = new Swiper(".slider-one", {
 const slider2 = new Swiper(".slider-two", {
   slidesPerView: 10,
   slidesPerGroup: 10,
+
+  // Optional parameters
+  // effect: "fade",
+  // fadeEffect: {
+  //   crossFade: true,
+  // },
+  autoplay: {
+    delay: 5000,
+  },
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination2",
+    type: "bullets",
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+const slider3 = new Swiper(".slider-three", {
+  slidesPerView: 1,
 
   // Optional parameters
   // effect: "fade",
