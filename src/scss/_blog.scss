@@ -373,6 +373,13 @@
     flex-direction: column;
   }
 
+  .form-title {
+    margin-bottom: 25px;
+    color: $color-title;
+    @extend %title-font;
+    line-height: 23px;
+  }
+
   .form-group {
     display: flex;
     justify-content: space-between;
@@ -424,6 +431,12 @@
     padding: 6px 35px;
     width: 156px;
     cursor: pointer;
+  }
+  .form-checkbox__lable {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #a1a1a1;
   }
 }
 
