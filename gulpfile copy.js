@@ -9,6 +9,7 @@ const imagemin = require("gulp-imagemin");
 const del = require("del");
 const js_plugins = [];
 const css_plugins = [];
+const fileinclude = require("gulp-file-include");
 
 function browsersync() {
   browserSync.init({
@@ -79,10 +80,24 @@ function build() {
   ).pipe(dest("dist"));
 }
 
+function htmlInclude() {
+  return (
+    src(["./src/*.html"]),
+    pipe(
+      fileinclude({
+        prefix: "@@",
+        basepath: "@file",
+      })
+    ),
+    pipe(dest("./src")),
+    pipe(browserSync.stream())
+  );
+}
+
 function watching() {
-  watch(["src/scss/**/*.scss"], styles);
-  watch(["src/js/**/*.js", "!src/js/main.min.js"], scripts);
-  watch(["src/*.html"]).on("change", browserSync.reload);
+  watch(["./src/scss/**/*.scss"], styles);
+  watch(["./src/js/**/*.js", "!src/js/main.min.js"], scripts);
+  watch(["./src/*.html"]).on("change", browserSync.reload, htmlInclude);
 }
 
 exports.styles = styles;
