@@ -10,6 +10,7 @@
 
 <body>
   <div class="wrapper" id="app">
+   
     <header class="header">
       <div class="container">
         <div class="header__inner">
@@ -36,7 +37,7 @@
             <div class="sidebar" id="sidebar">
               <button class="sidebar__close" id="btn-close"><img src="images/close.svg" alt="close"></button>
               <div class="sidebar__content">
-                <a class="sidebar__logo logo-link" href="/"><img src="./images/big-logo.png" class="big-logo"
+                <a class="sidebar__logo logo-link" href="index.html"><img src="images/big-logo.png" class="big-logo"
                     alt="logo"></a>
                 <h4 class="sidebar__title">Side</h4>
                 <p class="sidebar__text">
@@ -58,6 +59,8 @@
       </div>
     </header>
 
+    @@include('header.html')
+
     <main class="main">
       <section class="hero">
 
@@ -68,7 +71,7 @@
             <div class="swiper-wrapper hero__slider">
               <!-- Slides -->
               <div class="swiper-slide hero__slider-item">
-                <img class="hero__slider-img" src="./images/home/slider/Group 1.png" alt="slide 1">
+                <img class="hero__slider-img" src="images/home/slider/slider1.jpg" alt="slide 1">
                 <div class="hero__slider-info">
                   <h1 class="hero__slider-title">
                     Furniture Collection
@@ -81,7 +84,7 @@
                 </div>
               </div>
               <div class="swiper-slide hero__slider-item">
-                <img class="hero__slider-img" src="./images/home/slider/slider1.png" alt="slide 2">
+                <img class="hero__slider-img" src="images/home/slider/slider2.png" alt="slide 2">
                 <div class="hero__slider-info">
                   <h1 class="hero__slider-title">
                     Furniture Collection
@@ -94,7 +97,7 @@
                 </div>
               </div>
               <div class="swiper-slide hero__slider-item">
-                <img class="hero__slider-img" src="./images/home/slider/slider1.png" alt="slide 3">
+                <img class="hero__slider-img" src="images/home/slider/slider3.png" alt="slide 3">
                 <div class="hero__slider-info">
                   <h1 class="hero__slider-title">
                     Furniture Collection
@@ -134,40 +137,40 @@
             <a class="collection__item" href="#">
               <div class="collection__info">
                 <h4 class="collection__info-title">Truffaut literally trust</h4>
-                <p class="collection__info-text">Living room furntiture | Chair</p>
+                <p class="collection__info-text">Living room furniture | Sofa</p>
               </div>
-              <img class="collection__img" src="./images/home/collection/container1.jpg" alt="collection1">
+              <img class="collection__img" src="images/home/collection/image1.jpg" alt="collection1">
 
             </a>
             <a class="collection__item" href="#">
-              <img class="collection__img" src="./images/home/collection/placeholder1.jpg" alt="collection2">
+              <img class="collection__img" src="images/home/collection/image2.jpg" alt="collection2">
               <div class="collection__info">
                 <h4 class="collection__info-title">Truffaut literally trust</h4>
-                <p class="collection__info-text">Living room furntiture | Chair</p>
-              </div>
-
-            </a>
-            <a class="collection__item" href="#">
-              <div class="collection__info">
-                <h4 class="collection__info-title">Truffaut literally trust</h4>
-                <p class="collection__info-text">Living room furntiture | Chair</p>
-              </div>
-              <img class="collection__img" src="./images/home/collection/container2.jpg" alt="collection3">
-
-            </a>
-            <a class="collection__item" href="#">
-              <img class="collection__img" src="./images/home/collection/container3.jpg" alt="collection4">
-              <div class="collection__info">
-                <h4 class="collection__info-title">Truffaut literally trust</h4>
-                <p class="collection__info-text">Living room furntiture | Chair</p>
+                <p class="collection__info-text">Living room furniture | Chair</p>
               </div>
 
             </a>
             <a class="collection__item" href="#">
-              <img class="collection__img" src="./images/home/collection/container4.jpg" alt="collection5">
               <div class="collection__info">
                 <h4 class="collection__info-title">Truffaut literally trust</h4>
-                <p class="collection__info-text">Living room furntiture | Chair</p>
+                <p class="collection__info-text">Living room furniture | Decor</p>
+              </div>
+              <img class="collection__img" src="images/home/collection/image3.jpg" alt="collection3">
+
+            </a>
+            <a class="collection__item" href="#">
+              <img class="collection__img" src="images/home/collection/image4.jpg" alt="collection4">
+              <div class="collection__info">
+                <h4 class="collection__info-title">Truffaut literally trust</h4>
+                <p class="collection__info-text">Living room furniture | Chair</p>
+              </div>
+
+            </a>
+            <a class="collection__item" href="#">
+              <img class="collection__img" src="images/home/collection/image5.jpg" alt="collection5">
+              <div class="collection__info">
+                <h4 class="collection__info-title">Truffaut literally trust</h4>
+                <p class="collection__info-text">Living room furniture | Sofa</p>
               </div>
 
             </a>
@@ -237,94 +240,94 @@
           <div class="gallery__inner">
             <div class="gallery__items" id="bedroom">
               <a class="gallery__item" href="#">
-                <img src="images/home/gallery/placeholder1.jpg" alt="images">
+                <img src="images/home/gallery/1/big-1.jpg" alt="bedroom">
               </a>
               <a class="gallery__item" href="#">
-                <img src="images/home/gallery/placeholder2.jpg" alt="images">
+                <img src="images/home/gallery/1/big-2.jpg" alt="bedroom">
               </a>
               <a class="gallery__item" href="#">
-                <img src="images/home/gallery/placeholder3.jpg" alt="images">
+                <img src="images/home/gallery/1/big-3.jpg" alt="bedroom">
               </a>
               <a class="gallery__item" href="#">
-                <img src="images/home/gallery/placeholder4.jpg" alt="images">
+                <img src="images/home/gallery/1/big-4.jpg" alt="bedroom">
               </a>
               <a class="gallery__item" href="#">
-                <img src="images/home/gallery/placeholder5.jpg" alt="images">
+                <img src="images/home/gallery/1/big-5.jpg" alt="bedroom">
               </a>
             </div>
 
 
             <div class="gallery__items" id="living-room">
               <a class="gallery__item" href="#">
-                <img src="images/home/gallery/placeholder1.jpg" alt="images">
+                <img src="images/home/gallery/2/big-1.jpg" alt="living-room">
               </a>
               <a class="gallery__item" href="#">
-                <img src="images/home/gallery/placeholder2.jpg" alt="images">
+                <img src="images/home/gallery/2/big-2.jpg" alt="living-room">
               </a>
               <a class="gallery__item" href="#">
-                <img src="images/home/gallery/placeholder3.jpg" alt="images">
+                <img src="images/home/gallery/2/big-3.jpg" alt="living-room">
               </a>
               <a class="gallery__item" href="#">
-                <img src="images/home/gallery/placeholder4.jpg" alt="images">
+                <img src="images/home/gallery/2/big-4.jpg" alt="living-room">
               </a>
               <a class="gallery__item" href="#">
-                <img src="images/home/gallery/placeholder5.jpg" alt="images">
+                <img src="images/home/gallery/2/big-5.jpg" alt="living-room">
               </a>
             </div>
 
 
             <div class="gallery__items" id="office">
               <a class="gallery__item" href="#">
-                <img src="images/home/gallery/placeholder1.jpg" alt="images">
+                <img src="images/home/gallery/3/big-1.jpg" alt="office">
               </a>
               <a class="gallery__item" href="#">
-                <img src="images/home/gallery/placeholder2.jpg" alt="images">
+                <img src="images/home/gallery/3/big-2.jpg" alt="office">
               </a>
               <a class="gallery__item" href="#">
-                <img src="images/home/gallery/placeholder3.jpg" alt="images">
+                <img src="images/home/gallery/3/big-3.jpg" alt="office">
               </a>
               <a class="gallery__item" href="#">
-                <img src="images/home/gallery/placeholder4.jpg" alt="images">
+                <img src="images/home/gallery/3/big-4.jpg" alt="office">
               </a>
               <a class="gallery__item" href="#">
-                <img src="images/home/gallery/placeholder5.jpg" alt="images">
+                <img src="images/home/gallery/3/big-5.jpg" alt="office">
               </a>
             </div>
 
 
             <div class="gallery__items" id="dining-room">
               <a class="gallery__item" href="#">
-                <img src="images/home/gallery/placeholder1.jpg" alt="images">
+                <img src="images/home/gallery/4/big-1.jpg" alt="dining-room">
               </a>
               <a class="gallery__item" href="#">
-                <img src="images/home/gallery/placeholder2.jpg" alt="images">
+                <img src="images/home/gallery/4/big-2.jpg" alt="dining-room">
               </a>
               <a class="gallery__item" href="#">
-                <img src="images/home/gallery/placeholder3.jpg" alt="images">
+                <img src="images/home/gallery/4/big-3.jpg" alt="dining-room">
               </a>
               <a class="gallery__item" href="#">
-                <img src="images/home/gallery/placeholder4.jpg" alt="images">
+                <img src="images/home/gallery/4/big-4.jpg" alt="dining-room">
               </a>
               <a class="gallery__item" href="#">
-                <img src="images/home/gallery/placeholder5.jpg" alt="images">
+                <img src="images/home/gallery/4/big-5.jpg" alt="dining-room">
               </a>
             </div>
 
             <div class="gallery__items" id="chair">
               <a class="gallery__item" href="#">
-                <img src="images/home/gallery/placeholder1.jpg" alt="images">
+                <img src="images/home/gallery/5/big-1.jpg" alt="chair">
               </a>
               <a class="gallery__item" href="#">
-                <img src="images/home/gallery/placeholder2.jpg" alt="images">
+                <img src="images/home/gallery/5/big-2.jpg" alt="chair">
               </a>
               <a class="gallery__item" href="#">
-                <img src="images/home/gallery/placeholder3.jpg" alt="images">
+                <img src="images/home/gallery/5/big-3.jpg" alt="chair">
               </a>
               <a class="gallery__item" href="#">
-                <img src="images/home/gallery/placeholder4.jpg" alt="images">
+                <img src="images/home/gallery/5/big-4.jpg" alt="chair">
               </a>
               <a class="gallery__item" href="#">
-                <img src="images/home/gallery/placeholder5.jpg" alt="images">
+                <img src="images/home/gallery/5/big-5.jpg" alt="chair">
               </a>
             </div>
           </div>
@@ -444,10 +447,11 @@
 
       </div>
     </footer>
+    
 
 </div>
 
-<script src="js/swiper.js"></script>
+
     <script src="js/main.min.js"></script>
 </body>
 
