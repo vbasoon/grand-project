@@ -93,7 +93,7 @@ const cleanDist = () => {
 };
 
 const images = () => {
-  return src()
+  return src("src/images/**/*")
     .pipe(
       imagemin([
         imagemin.gifsicle({ interlaced: true }),
@@ -164,9 +164,17 @@ const html = () => {
     .pipe(server.stream());
 };
 
+const imageToApp = () => {
+  return src("src/images/**/*").pipe();
+};
+
 const watching = () => {
   watch("./src/**/*.html", html).on("change", server.reload);
   watch("./src/scss/**/*.scss", styles).on("change", server.reload);
+  watch(["./src/js/**/*.js", "!src/js/main.min.js"], scripts).on(
+    "change",
+    server.reload
+  );
   //watch(["./src/scss/**/*.scss"], styles);
   //watch(["./src/js/**/*.js", "!src/js/main.min.js"], scripts);
   //watch(["./src/*.html"]);
@@ -183,5 +191,5 @@ exports.html = html;
 exports.build = series(cleanDist, images, build);
 exports.default = series(
   cleanDist,
-  parallel(html, styles, scripts, browsersync, watching)
+  parallel(html, styles, scripts, images, browsersync, watching)
 );
