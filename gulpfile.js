@@ -82,7 +82,7 @@ const cb = () => {};
 const browsersync = () => {
   server.init({
     server: {
-      baseDir: "./",
+      baseDir: project_folder,
     },
     notify: false,
   });
