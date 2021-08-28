@@ -39,7 +39,7 @@ const concat = require("gulp-concat");
 const scss = require("gulp-sass")(require("sass"));
 const notify = require("gulp-notify");
 const rename = require("gulp-rename");
-const browserSync = require("browser-sync").create();
+const server = require("browser-sync").create();
 const svgSprite = require("gulp-svg-sprite");
 const ttf2woff = require("gulp-ttf2woff");
 const ttf2woff2 = require("gulp-ttf2woff2");
@@ -70,26 +70,26 @@ const fileinclude = require("gulp-file-include");
 const js_plugins = [
   "node_modules/jquery/dist/jquery.js",
   "node_modules/swiper/swiper-bundle.min.js",
-  "src/js/main.js",
+  "./src/js/main.js",
 ];
 const css_plugins = [
   "node_modules/swiper/swiper-bundle.min.css",
-  "src/scss/style.scss",
+  "./src/scss/style.scss",
 ];
 
 const cb = () => {};
 
 const browsersync = () => {
-  browserSync.init({
+  server.init({
     server: {
-      baseDir: "src/",
+      baseDir: "./",
     },
     notify: false,
   });
 };
 
 const cleanDist = () => {
-  return del("dist");
+  return del(path.clean);
 };
 
 const images = () => {
@@ -104,20 +104,25 @@ const images = () => {
         }),
       ])
     )
-    .pipe(dest("dist/images"));
+    .pipe(dest(path.build.img));
 };
 
 const scripts = () => {
   return src(js_plugins)
     .pipe(concat("main.min.js"))
     .pipe(uglify())
-    .pipe(dest("src/js"))
-    .pipe(browserSync.stream());
+    .pipe(dest(path.build.js))
+    .pipe(server.stream());
 };
 
 const styles = () => {
   return src(css_plugins)
-    .pipe(scss({ outputStyle: "compressed" }))
+    .pipe(sourcemaps.init())
+    .pipe(
+      scss({
+        outputStyle: "compressed",
+      }).on("error", notify.onError())
+    )
     .pipe(concat("style.min.css"))
     .pipe(
       autoprefixer({
@@ -125,8 +130,14 @@ const styles = () => {
         grid: true,
       })
     )
-    .pipe(dest("src/css"))
-    .pipe(browserSync.stream());
+    .pipe(
+      cleanCSS({
+        level: 2,
+      })
+    )
+    .pipe(sourcemaps.write("."))
+    .pipe(dest(path.build.css))
+    .pipe(server.stream());
 };
 
 const build = () => {
@@ -141,24 +152,24 @@ const build = () => {
   ).pipe(dest("dist"));
 };
 
-const htmlInclude = () => {
-  return (
-    src(["./src/*.html"]),
-    pipe(
+const html = () => {
+  return src(path.src.html)
+    .pipe(
       fileinclude({
         prefix: "@@",
         basepath: "@file",
       })
-    ),
-    pipe(dest("./src")),
-    pipe(browserSync.stream())
-  );
+    )
+    .pipe(dest(path.build.html))
+    .pipe(server.stream());
 };
 
 const watching = () => {
-  watch(["./src/scss/**/*.scss"], styles);
-  watch(["./src/js/**/*.js", "!src/js/main.min.js"], scripts);
-  watch(["./src/*.html"]).on("change", browserSync.reload, htmlInclude);
+  watch("./src/**/*.html", html).on("change", server.reload);
+  watch("./src/scss/**/*.scss", styles).on("change", server.reload);
+  //watch(["./src/scss/**/*.scss"], styles);
+  //watch(["./src/js/**/*.js", "!src/js/main.min.js"], scripts);
+  //watch(["./src/*.html"]);
 };
 
 exports.styles = styles;
@@ -167,6 +178,10 @@ exports.browsersync = browsersync;
 exports.scripts = scripts;
 exports.images = images;
 exports.cleanDist = cleanDist;
+exports.html = html;
 
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = series(
+  cleanDist,
+  parallel(html, styles, scripts, browsersync, watching)
+);

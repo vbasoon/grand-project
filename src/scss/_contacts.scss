@@ -102,6 +102,8 @@
   }
 }
 .contact-slider {
+  display: flex;
+  //flex-wrap: wrap;
   &__item {
     position: relative;
     margin-bottom: 20px;
@@ -139,10 +141,10 @@
 .swiper-pagination2 {
   display: flex;
   gap: 28px;
-  margin-bottom: 105px;
+  margin-bottom: 102px;
   & span {
     display: block;
-    width: 5px;
-    height: 5px;
+    width: 8px;
+    height: 8px;
   }
 }

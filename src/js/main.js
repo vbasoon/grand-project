@@ -110,13 +110,6 @@ const slider3 = new Swiper(".slider-three", {
   },
   loop: true,
 
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination2",
-    type: "bullets",
-    clickable: true,
-  },
-
   // Navigation arrows
   navigation: {
     nextEl: ".swiper-button-next",
