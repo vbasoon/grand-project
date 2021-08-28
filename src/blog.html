@@ -10,52 +10,7 @@
 
 <body>
   <div class="wrapper" id="app">
-    <header class="header">
-      <div class="container">
-        <div class="header__inner">
-          <nav class="menu">
-            <ul class="menu__list">
-              <li class="menu__list-item"><a class="menu__list-link href=""#">About</a></li>
-              <li class="menu__list-item"><a class="menu__list-link href=""#">Gallery</a></li>
-            </ul>
-          </nav>
-          <div class="logo">
-            <img src="images/logo.png" alt="logo">
-          </div>
-          <nav class="menu">
-            <ul class="menu__list">
-              <li class="menu__list-item"><a class="menu__list-link menu__list-link--active href=""#">Blog</a></li>
-              <li class="menu__list-item"><a class="menu__list-link href=""#">Contacts</a></li>
-            </ul>
-          </nav>
-          <button class="header__sidebar-btn" id="btn-menu" href="#"><img src="images/icon_menu.svg" alt="menu-button">
-          </button>
-          <div class="header__sidebar">
-
-            <div class="sidebar" id="sidebar">
-              <button class="sidebar__close" id="btn-close"><img src="images/close.svg" alt="close"></button>
-              <div class="sidebar__content">
-                <a class="sidebar__logo logo-link" href="/"><img src="./images/big-logo.png" class="big-logo"
-                    alt="logo"></a>
-                <h4 class="sidebar__title">Side</h4>
-                <p class="sidebar__text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae id laudantium molestias amet enim alias.
-                  Laboriosam omnis vero, assumenda, soluta incidunt repellat delectus facere illo consequatur minus,
-                  laborum nihil? Ea!
-                </p>
-
-                <img class="sidebar__image" src="./images/sidebar-img.jpg" alt="sidebar-image">
-
-              </div>
-
-            </div>
-            <div class="sidebar__overlay">
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+    @@include('_header.html')
 
     <main class="main">
       <div class="breadscrumbs bredscrumbs__transparent">
@@ -298,76 +253,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <div class="footer__content">
-        <div class="footer__container container">
-          <div class="footer__info">
-            <h6 class="footer__info-title">Contact Us</h6>
-            <p class="footer__info-text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam eius veniam, dolor provident possimus
-              laboriosam, delectus molestiae perspiciatis rerum ad neque est error! Consectetur, itaque vel? Libero
-              consequatur deserunt esse.
-            </p>
-            <a class="info-email" href="mailto:vbasoon@gmail.com">vbasoon@gmail.com</a>
-            <form action="" class="footer__form">
-              <input class="footer__form-input" type="email" placeholder="input e-mail here">
-              <button class="footer__form-button" type="submit">Send Message</button>
-            </form>
-          </div>
-
-          <ul class="footer__social">
-            <li class="footer__social-item">
-              <a class="footer__social-link footer__social-link--facebook " href="#">
-                Facebook
-              </a>
-            </li>
-            <li class="footer__social-item">
-              <a class="footer__social-link footer__social-link--instagram" href="#">
-                Instagram
-              </a>
-            </li>
-            <li class="footer__social-item">
-              <a class="footer__social-link footer__social-link--pinterest" href="#">
-                Printerest
-              </a>
-            </li>
-            <li class="footer__social-item">
-              <a class="footer__social-link footer__social-link--whatsapp" href="#">
-                WatsApp
-              </a>
-            </li>
-            <li class="footer__social-item">
-              <a class="footer__social-link footer__social-link--youtube" href="#">
-                YouTube
-              </a>
-            </li>
-          </ul>
-          <nav class="footer__menu">
-            <ul class="footer__menu-list">
-              <li class="footer__menu-item">
-                <a class="footer__menu-link" href="#">Delivery</a>
-              </li>
-              <li class="footer__menu-item">
-                <a class="footer__menu-link" href="#">FAQ</a>
-              </li>
-              <li class="footer__menu-item">
-                <a class="footer__menu-link" href="#">Help</a>
-              </li>
-              <li class="footer__menu-item">
-                <a class="footer__menu-link" href="#">More About Us</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <div class="footer__copyright">
-        <div class="container">
-          <p>BVM corp. All right reserved &copy; 2021</p>
-
-        </div>
-
-      </div>
-    </footer>
+    @@include('_footer.html')
 
 
 
