@@ -140,13 +140,15 @@ const styles = () => {
     .pipe(server.stream());
 };
 
-const build = () => {
+const buildCopy = () => {
   return src(
     [
-      "src/css/style.min.css",
+      "src/css/**/*.min.css",
+      "src/js/**/*.min.js",
+      "src/images/**/*",
+      "src/**/*.html",
       "src/fonts/**/*",
-      "src/js/main.min.js",
-      "src/*.html",
+      "src/resouces/**/*",
     ],
     { base: "src" }
   ).pipe(dest("dist"));
@@ -188,7 +190,7 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 exports.html = html;
 
-exports.build = series(cleanDist, images, build);
+exports.build = series(cleanDist, styles, scripts, images, html, buildCopy);
 exports.default = series(
   cleanDist,
   parallel(html, styles, scripts, images, browsersync, watching)

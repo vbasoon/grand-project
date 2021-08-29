@@ -1,5 +1,5 @@
 .sidebar {
-  transform: translateX(320%);
+  transform: translateX(1000%);
   position: absolute;
   right: 0;
   top: 0;
@@ -35,6 +35,14 @@
   &__logo {
     display: inline-block;
     margin-bottom: 40px;
+    width: 100px;
+    img {
+      width: 100%;
+    }
+    p {
+      color: $color-title;
+      font-size: 22px;
+    }
   }
 
   &__title {
