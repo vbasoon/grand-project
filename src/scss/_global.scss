@@ -52,10 +52,16 @@ body {
   z-index: 7;
   &__list {
     display: flex;
-    gap: 5px;
+    gap: 0.5rem;
+    overflow-x: auto;
+  }
+  &__item {
+    position: relative;
+    padding-right: 4px;
   }
   &__item::after {
     content: "/";
+    position: absolute;
   }
   &__item:last-child::after {
     display: none;
