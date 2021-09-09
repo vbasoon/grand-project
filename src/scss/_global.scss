@@ -10,12 +10,14 @@ body {
   line-height: 1.68rem;
   color: $color-text;
   overflow-x: hidden;
+
   min-width: 320px;
   margin: 0 auto;
 }
 
 .wrapper {
   display: flex;
+
   flex-direction: column;
   min-height: 100%;
   min-width: 0;
@@ -30,7 +32,7 @@ body {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1110px;
   margin: 0 auto;
   padding: 0 1rem;
 }

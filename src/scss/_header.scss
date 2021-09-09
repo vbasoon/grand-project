@@ -8,6 +8,7 @@
     padding: 0 0.625rem;
   }
   &__sidebar-btn {
+    display: inline-block;
     background-color: transparent;
     border: none;
     padding: 0;
@@ -15,17 +16,20 @@
   }
   &__btn-menu {
     display: none;
+    position: relative;
+    z-index: 12;
   }
 }
 
 .logo {
-  &__link {
-    color: $color-title;
-  }
   position: relative;
   bottom: 15px;
   width: 70px;
   height: 70px;
+  z-index: 12;
+  &__link {
+    color: $color-title;
+  }
 
   &__img {
     width: 100%;
@@ -38,6 +42,10 @@
 .menu {
   padding-left: 2.19rem;
   padding-right: 3.75rem;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
   &__list {
     display: flex;
     gap: 5rem;

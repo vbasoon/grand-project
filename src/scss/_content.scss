@@ -17,10 +17,11 @@
   .hero__slider {
     &-item {
       display: flex;
-      width: 100%;
+      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       overflow-x: hidden;
+      width: 100%;
     }
 
     &-img {
@@ -28,6 +29,9 @@
       //height: 815px;
       object-fit: cover;
       margin-left: -14%;
+      img {
+        width: 100%;
+      }
     }
     &-info {
       max-width: 645px;
@@ -95,6 +99,11 @@
 
 .work-stages {
   padding: 80px 0 30px;
+
+  .work-stages__row {
+    display: flex;
+    justify-content: flex-end;
+  }
   &__title {
     @extend %title-font;
     text-align: center;
@@ -108,21 +117,23 @@
     flex-wrap: wrap;
     align-items: flex-start;
     .work-stage {
-      width: 250px;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       &__one {
+        width: 300px;
+        padding-right: 34px;
       }
       &__two {
-        margin-left: 317px;
+        width: 250px;
+        margin-left: 434px;
         position: relative;
 
-        padding-bottom: 60px;
+        padding-bottom: 75px;
         &::before {
           position: absolute;
           content: "";
-          bottom: -1px;
+          bottom: 22px;
           left: 0px;
           width: 2px;
           height: 20px;
@@ -130,6 +141,7 @@
         }
       }
       &__three {
+        width: 230px;
         padding-top: 20px;
         margin-left: 305px;
         position: relative;
@@ -291,7 +303,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url("../images/about/inpiration-bg.png");
+    background-image: url("../images/about/inspiration-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 362px;

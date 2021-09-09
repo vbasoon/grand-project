@@ -15,7 +15,7 @@
     <header class="header">
     <div class="container">
       <div class="header__inner">
-        <nav class="menu">
+        <nav class="menu menu-header" id="menu-header-1">
           <ul class="menu__list">
             <li class="menu__list-item"><a class="menu__list-link" href="about.html">About</a></li>
             <li class="menu__list-item"><a class="menu__list-link" href="gallery.html">Gallery</a></li>
@@ -28,15 +28,18 @@
             </a>
           
         </div>
-        <nav class="menu">
+        <nav class="menu menu-header" id="menu-header-2">
           <ul class="menu__list">
             <li class="menu__list-item"><a class="menu__list-link" href="blog.html">Blog</a></li>
             <li class="menu__list-item"><a class="menu__list-link" href="contacts.html">Contacts</a></li>
           </ul>
+          <div>
+            
         </nav>
-        
         <button class="header__sidebar-btn" id="btn-menu" href="#"><img src="images/icon_menu.svg" alt="menu-button">
         </button>
+          </div>
+          
         <div class="header__sidebar">
 
     <div class="sidebar" id="sidebar">
@@ -63,13 +66,15 @@
 
     </div>
   </div>
+        
+        
         <button class="header__btn-menu" id="burger-menu">
           <span></span>
           <span></span>
           <span></span>
         </button>
       </div>
-    </div>
+    
   </header>
 
     
@@ -210,7 +215,8 @@
           </h3>
 
           <div class="work-stages__box">
-            <li class="work-stage work-stage__one">
+            <div class="work-stages__row">
+              <li class="work-stage work-stage__one">
               <img class="work-stage__icon" src="./images/home/tools/003-graphic tool.svg" alt="work-stage 1">
               <h6 class="work-stage__title">Designer Consultation</h6>
               <p class="work-stage__text">
@@ -225,6 +231,8 @@
                 Everyday carry actually neutra authentic kogi shabby chic
               </p>
             </li>
+            </div>
+            
             <div class="work-stage__line"></div>
             <li class="work-stage work-stage__three">
 
@@ -353,8 +361,8 @@
             <div class="blogposts-small__items">
 
               <div class="blogposts-small__item blogpost">
-                <a class="blogpost__img-link" href="#">
-                  <img class="blogpost__img" src="images/blog/1.jpg" alt="">
+                <a class="blogpost__link" href="#">
+                  <img class="blogpost__link-img" src="images/blog/1.jpg" alt="">
                 </a>
                   <div class="blogpost__info">
                     <span class="blogpost__info-date">March 12, 2020</span> |
@@ -366,8 +374,8 @@
                   </div>
               </div>
               <div class="blogposts-small__item blogpost">
-                <a class="blogpost__img-link" href="#">
-                  <img class="blogpost__img" src="images/blog/2.jpg" alt="">
+                <a class="blogpost__link" href="#">
+                  <img class="blogpost__link-img" src="images/blog/2.jpg" alt="">
                 </a>
                   <div class="blogpost__info">
                     <span class="blogpost__info-date">September 28,2020</span> |

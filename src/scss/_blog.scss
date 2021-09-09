@@ -1,5 +1,12 @@
 .blogposts-small {
-  padding-bottom: 100px;
+  .container {
+    max-width: 1100px;
+    padding: 0 20px 100px;
+  }
+  &__inner {
+    margin: 0 auto;
+  }
+
   &__title {
     color: $color-title;
     @extend %title-font;
@@ -11,14 +18,20 @@
   }
   &__items {
     display: flex;
+    justify-content: center;
     gap: 20px;
   }
+
   .blogpost {
-    &__img-link {
-      width: 100%;
-      margin-bottom: 19px;
+    &__link {
+      margin-bottom: 0 0 19px 0;
       display: inline-block;
     }
+
+    &__link-img {
+      object-fit: cover;
+    }
+
     &__info {
       margin-bottom: 9px;
       font-size: 14px;

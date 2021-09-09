@@ -1,8 +1,6 @@
 const app = document.getElementById("app");
-const menuHeader1 = document.querySelector("#menu-header-1");
-const menuHeader2 = document.querySelector("#menu-header-2");
-//console.log(menuHeader);
-//const menuHeader = document.getElementById("menu-header-2");
+const menuHeader1 = document.getElementById("menu-header-1");
+const menuHeader2 = document.getElementById("menu-header-2");
 const menuBtn = document.getElementById("btn-menu");
 const burgerBtn = document.getElementById("burger-menu");
 const sidebar = document.getElementById("sidebar");
@@ -14,11 +12,6 @@ const gallery_btn = document.querySelectorAll(".gallery__btn");
 const heroSlider = document.querySelector(".slider-one");
 const contactSlider = document.querySelector(".slider-two");
 const blogSlider = document.querySelector(".slider-three");
-
-burgerBtn.addEventListener("click", () => {
-  menuHeader1.classList.toggle("menu--open");
-  menuHeader2.classList.toggle("menu--open");
-});
 
 gallery_btn.forEach(onTabClick);
 function onTabClick(item) {
@@ -45,6 +38,11 @@ function onTabClick(item) {
 if (gallery_tab.length !== 0) {
   document.querySelector(".gallery__btn:nth-child(2)").click();
 }
+
+burgerBtn.addEventListener("click", () => {
+  menuHeader1.classList.toggle("menu--open");
+  menuHeader2.classList.toggle("menu--open");
+});
 
 menuBtn.addEventListener("click", () => {
   sidebar.classList.toggle("sidebar__open");

@@ -2,7 +2,9 @@
   &__container {
     display: flex;
     justify-content: space-between;
+    //flex-wrap: wrap;
     gap: 1rem;
+    max-width: 1110px;
   }
   &__content {
     background-color: $color-footer;
@@ -10,6 +12,8 @@
   }
 
   &__info {
+    display: flex;
+    flex-wrap: wrap;
     width: 540px;
   }
 
@@ -58,8 +62,8 @@
 
   &__social {
     width: 125px;
-    margin-right: auto;
-    margin-left: 100px;
+    //margin-right: 50px;
+    //margin-left: 100px;
   }
 
   &__social-link {
@@ -113,7 +117,7 @@
   &__menu {
     margin-right: 60px;
     width: 125px;
-    text-align: center;
+    //text-align: center;
   }
 
   &__menu-link {
@@ -125,22 +129,5 @@
     text-align: center;
     padding: 42px 0px 41px;
     font-size: 0.75rem;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  .footer {
-    &__social {
-      margin-left: 50px;
-    }
-    &__menu {
-      margin-right: 0;
-    }
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .footer__social {
-    margin-left: 0px;
   }
 }

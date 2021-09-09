@@ -1,6 +1,10 @@
 .gallery {
   padding: 80px 0 90px;
 
+  &__inner {
+    margin: 0 auto;
+  }
+
   &__buttons {
     display: flex;
     justify-content: center;
