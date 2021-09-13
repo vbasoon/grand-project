@@ -8,8 +8,10 @@
       content: "";
       position: absolute;
       background-image: url("../images/home/slider_bg.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
       width: 100%;
-      height: 610px;
+      padding: 338px 10px;
       top: 0;
       z-index: -1;
     }
@@ -17,18 +19,19 @@
   .hero__slider {
     &-item {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       justify-content: center;
       align-items: center;
       overflow-x: hidden;
       width: 100%;
+      margin: 0 auto;
     }
 
     &-img {
       max-width: 590px;
       //height: 815px;
       object-fit: cover;
-      margin-left: -14%;
+      margin-left: 40px;
       img {
         width: 100%;
       }

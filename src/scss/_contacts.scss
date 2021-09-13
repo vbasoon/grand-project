@@ -102,7 +102,10 @@
   }
 }
 .contact-slider {
-  display: flex;
+  .slider-two {
+    display: flex;
+    justify-content: center;
+  }
   //flex-wrap: wrap;
   &__item {
     position: relative;

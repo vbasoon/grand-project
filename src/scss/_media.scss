@@ -1,3 +1,195 @@
+@media (max-width: 1440px) {
+  .header {
+    &__inner {
+      height: 6rem;
+
+      &::after {
+        padding: 228px 10px;
+      }
+    }
+  }
+  .swiper-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    min-width: 0;
+
+    //border: 2px solid red;
+  }
+
+  .swiper-slide {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .hero {
+    &__inner {
+      padding-bottom: 0px;
+      &::after {
+        padding: 228px 10px;
+      }
+    }
+    .hero__slider {
+      &-item {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+      }
+
+      &-img {
+        max-width: 395px;
+        //height: 815px;
+        object-fit: cover;
+        margin-left: 150px;
+        img {
+          width: 100%;
+        }
+      }
+      &-info {
+        max-width: 645px;
+        margin-left: 25px;
+        padding-right: 10px;
+      }
+
+      &-title {
+        font-size: 76px;
+        line-height: 90px;
+      }
+      &-text {
+        max-width: 585px;
+      }
+    }
+  }
+
+  .new-collection {
+    padding: 40px 0;
+    .collection {
+      padding: 20px 0 50px;
+      &__items {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  .inspiration {
+    &__images {
+      margin-right: 36px;
+      margin-left: 0px;
+    }
+  }
+
+  .partners {
+    padding: 16px 50px 60px;
+    &__items {
+      display: flex;
+      justify-content: center;
+      gap: 4.25rem;
+    }
+    &__item {
+      width: 189px;
+      height: 189px;
+      //border: 2px solid green;
+    }
+  }
+
+  .gallery {
+    padding: 40px 0;
+    &__items {
+      display: none;
+      justify-items: center;
+
+      grid-template-rows: repeat(1, 1fr);
+      animation: fadeEffect 1s;
+      margin: 0 20px;
+    }
+    &__items.active {
+      display: grid;
+      justify-items: center;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+      margin: 0 20px;
+    }
+    &__item img {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      //height: 1150px;
+    }
+    &__item:first-child {
+      grid-column: span 1;
+      grid-row: span 1;
+      object-fit: cover;
+    }
+    &__item:last-child {
+      display: none;
+    }
+    &.gallery-page {
+      .gallery__item:nth-child(8) {
+        grid-column: span 1;
+        grid-row: span 1;
+        object-fit: cover;
+      }
+    }
+    &.gallery-page {
+      .gallery__item:last-child {
+        display: block;
+        object-fit: cover;
+      }
+    }
+  }
+  .blog {
+    padding: 40px 0;
+  }
+  .map {
+    iframe {
+      height: 450px;
+    }
+  }
+
+  .contact {
+    padding-bottom: 40px;
+  }
+  .slider-two {
+    margin: 0 auto 50px;
+    .contact-slider {
+      width: 100%;
+      margin: 0 auto;
+      gap: 10px;
+
+      &__img {
+        width: 95%;
+        height: 100px;
+        object-fit: cover;
+      }
+      &__title {
+      }
+    }
+  }
+
+  .swiper-pagination2 {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    padding-bottom: 0px;
+    & span {
+      display: block;
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+
 @media (max-width: 992px) {
   .work-stages {
     &__box {
@@ -147,8 +339,11 @@
 
 @media (max-width: 540px) {
   .header {
+    &__container-fluid {
+      max-width: 100%;
+      //flex-wrap: wrap;
+    }
     &__inner {
-      flex-wrap: wrap;
       padding-top: 30px;
     }
     .logo {
@@ -157,14 +352,16 @@
     }
     .menu {
       //display: none;
-      padding-right: 0;
+      //padding-right: 0;
       width: 100%;
+      //order: -1;
       background-color: #fff;
       position: relative;
       z-index: 11;
       text-align: center;
       transform: translateY(-350px);
       transition: transform 0.5s;
+      margin: 0 auto;
       &--open {
         transform: translateY(28px);
       }
@@ -181,10 +378,10 @@
     }
     &__btn-menu {
       display: block;
-      order: -1;
       border: none;
       background-color: transparent;
       cursor: pointer;
+      order: -1;
       width: 50px;
       height: 50px;
 
