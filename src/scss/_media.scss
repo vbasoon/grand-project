@@ -106,25 +106,26 @@
     padding: 40px 0;
     &__items {
       display: none;
-      justify-items: center;
-
       grid-template-rows: repeat(1, 1fr);
       animation: fadeEffect 1s;
       margin: 0 20px;
     }
     &__items.active {
       display: grid;
-      justify-items: center;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(1, 1fr);
+      grid-auto-flow: dense;
       margin: 0 20px;
     }
-    &__item img {
-      display: block;
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-      //height: 1150px;
+    &__item {
+      min-height: 500px;
+      img {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        //height: 1150px;
+      }
     }
     &__item:first-child {
       grid-column: span 1;
@@ -144,6 +145,7 @@
     &.gallery-page {
       .gallery__item:last-child {
         display: block;
+        grid-column: 4 / 5;
         object-fit: cover;
       }
     }
