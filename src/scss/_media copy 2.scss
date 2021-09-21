@@ -712,3 +712,41 @@
     }
   }
 }
+
+// Hero 540px
+
+.hero {
+  .hero__slider {
+    &-img {
+      max-width: 250px;
+      margin-left: 1rem;
+
+      img {
+        width: 100%;
+      }
+    }
+    &-info {
+      max-width: 445px;
+      margin-left: 25px;
+      padding-right: 10px;
+    }
+
+    &-title {
+      padding-top: 1rem;
+      font-size: 35px;
+      line-height: 42px;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 185px;
+        height: 1px;
+        background: #6d7278;
+      }
+    }
+    &-text {
+      max-width: 585px;
+    }
+  }
+}
